@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+  <div>
+    <header>
+      <div>
+        <h1>select your role</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="box" onclick="moveBox(this)"></div>
+      <div class="box" onclick="moveBox(this)">h1</div>
+    </main>
+  </div>
+    <script src="{% static 'app/static/js/home.js' %}"></script>
+</body>
+</html>
