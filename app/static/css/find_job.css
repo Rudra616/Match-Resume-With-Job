@@ -1,0 +1,128 @@
+/* Reset basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f0f4f8, #d9e2ec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+/* Container styling */
+.container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Heading styles */
+h1, h2 {
+  color: #102a43;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  color: #334e68;
+}
+
+input[type="file"] {
+  padding: 10px;
+  border: 2px solid #d9e2ec;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+input[type="file"]:hover {
+  border-color: #829ab1;
+}
+
+button {
+  background-color: #2069e0;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1557c0;
+}
+
+/* Job results styling */
+.job-results {
+  margin-top: 30px;
+}
+
+.job-results ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.job-results li {
+  background-color: #f1f5f9;
+  border-left: 5px solid #2069e0;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.job-results li:hover {
+  transform: scale(1.02);
+}
+
+.job-results strong {
+  font-size: 18px;
+  color: #102a43;
+}
+
+.job-results p {
+  color: #627d98;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  input[type="file"] {
+    font-size: 14px;
+  }
+
+  .job-results li {
+    padding: 12px 15px;
+  }
+}
