@@ -1,0 +1,32 @@
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <label for="resume">Upload Resume (txt/pdf):</label>
+  <input type="file" name="resume" id="resume" required>
+  <button type="submit">Find Jobs</button>
+</form>
+
+{% if error %}
+  <p style="color:red;">{{ error }}</p>
+{% endif %}
+
+{% if matched_jobs %}
+  <h3>Matched Jobs:</h3>
+  <ul>
+    {% for job, percent in matched_jobs %}
+      <li>{{ job.title }} (Match: {{ percent }}%)</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+{% if error %}
+  <div style="color: red;">{{ error }}</div>
+{% endif %}
+{% if matched_jobs %}
+  <h3>Matched Jobs:</h3>
+  <ul>
+  {% for job, percent in matched_jobs %}
+    <li>{{ job.title }} — Match: {{ percent }}%</li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No jobs matched yet.</p>
+{% endif %}
